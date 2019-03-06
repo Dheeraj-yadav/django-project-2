@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block page %}
+<div class="row">
+    {% for product in products %}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+        <img src="{% static 'images.jpg' %}" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text">{{product.name}} is a very bright student</p>
+            <a href="#" class="btn btn-primary">Get Data</a>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
